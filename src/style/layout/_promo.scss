@@ -1,5 +1,5 @@
-@use "../abstracts/mixins";
-@use "../abstracts/variables";
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
 
 .promo {
   @include mixins.flexbox();
@@ -8,7 +8,7 @@
   background-color: #dff3ed;
 
   @media (max-width: 600px) {
-      min-height: 260px;
+    min-height: 260px;
   }
 
   .container {
@@ -33,7 +33,6 @@
       padding: 10px;
       height: 200px;
     }
-    
   }
 
   &__photo {

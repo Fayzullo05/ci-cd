@@ -11,11 +11,7 @@
       "stock": 28,
       "type": "Succulent",
       "thumbnail": "plants/1/1.jpg",
-      "images": [
-        "plants/1/1.jpg",
-        "plants/1/2.jpg",
-        "plants/1/3.jpg"
-      ]
+      "images": ["plants/1/1.jpg", "plants/1/2.jpg", "plants/1/3.jpg"]
     },
     {
       "id": 2,
@@ -28,11 +24,7 @@
       "stock": 34,
       "type": "Succulent",
       "thumbnail": "plants/2/1.jpg",
-      "images": [
-        "plants/2/1.jpg",
-        "plants/2/2.jpg",
-        "plants/2/3.jpg"
-      ]
+      "images": ["plants/2/1.jpg", "plants/2/2.jpg", "plants/2/3.jpg"]
     },
     {
       "id": 3,
@@ -45,11 +37,7 @@
       "stock": 36,
       "type": "Succulent",
       "thumbnail": "plants/3/1.jpg",
-      "images": [
-        "plants/3/1.jpg",
-        "plants/3/2.jpg",
-        "plants/3/3.jpg"
-      ]
+      "images": ["plants/3/1.jpg", "plants/3/2.jpg", "plants/3/3.jpg"]
     },
     {
       "id": 4,
@@ -62,11 +50,7 @@
       "stock": 13,
       "type": "Succulent",
       "thumbnail": "plants/4/1.jpg",
-      "images": [
-        "plants/4/1.jpg",
-        "plants/4/2.jpg",
-        "plants/4/3.jpg"
-      ]
+      "images": ["plants/4/1.jpg", "plants/4/2.jpg", "plants/4/3.jpg"]
     },
     {
       "id": 5,
@@ -79,10 +63,7 @@
       "stock": 32,
       "type": "Succulent",
       "thumbnail": "plants/5/1.jpg",
-      "images": [
-        "plants/5/1.jpg",
-        "plants/5/2.jpg"
-      ]
+      "images": ["plants/5/1.jpg", "plants/5/2.jpg"]
     },
     {
       "id": 6,
@@ -95,10 +76,7 @@
       "stock": 23,
       "type": "Succulent",
       "thumbnail": "plants/6/1.jpg",
-      "images": [
-        "plants/6/1.jpg",
-        "plants/6/2.jpg"
-      ]
+      "images": ["plants/6/1.jpg", "plants/6/2.jpg"]
     },
     {
       "id": 7,
@@ -111,10 +89,7 @@
       "stock": 1,
       "type": "Sansevieria",
       "thumbnail": "plants/7/1.jpg",
-      "images": [
-        "plants/7/1.jpg",
-        "plants/7/2.jpg"
-      ]
+      "images": ["plants/7/1.jpg", "plants/7/2.jpg"]
     },
     {
       "id": 8,
@@ -127,10 +102,7 @@
       "stock": 38,
       "type": "Sansevieria",
       "thumbnail": "plants/8/1.jpg",
-      "images": [
-        "plants/8/1.jpg",
-        "plants/8/2.jpg"
-      ]
+      "images": ["plants/8/1.jpg", "plants/8/2.jpg"]
     },
     {
       "id": 9,
@@ -143,10 +115,7 @@
       "stock": 36,
       "type": "Sansevieria",
       "thumbnail": "plants/9/1.jpg",
-      "images": [
-        "plants/9/1.jpg",
-        "plants/9/2.jpg"
-      ]
+      "images": ["plants/9/1.jpg", "plants/9/2.jpg"]
     },
     {
       "id": 10,
@@ -159,10 +128,7 @@
       "stock": 28,
       "type": "Flowering",
       "thumbnail": "plants/10/1.jpg",
-      "images": [
-        "plants/10/1.jpg",
-        "plants/10/2.jpg"
-      ]
+      "images": ["plants/10/1.jpg", "plants/10/2.jpg"]
     },
     {
       "id": 11,
@@ -175,10 +141,7 @@
       "stock": 65,
       "type": "Flowering",
       "thumbnail": "plants/11/1.jpg",
-      "images": [
-        "plants/11/1.jpg",
-        "plants/11/2.jpg"
-      ]
+      "images": ["plants/11/1.jpg", "plants/11/2.jpg"]
     },
     {
       "id": 12,
@@ -191,10 +154,7 @@
       "stock": 52,
       "type": "Flowering",
       "thumbnail": "plants/12/1.jpg",
-      "images": [
-        "plants/12/1.jpg",
-        "plants/12/2.jpg"
-      ]
+      "images": ["plants/12/1.jpg", "plants/12/2.jpg"]
     },
     {
       "id": 13,
@@ -207,10 +167,7 @@
       "stock": 40,
       "type": "Flowering",
       "thumbnail": "plants/13/1.jpg",
-      "images": [
-        "plants/13/1.jpg",
-        "plants/13/2.jpg"
-      ]
+      "images": ["plants/13/1.jpg", "plants/13/2.jpg"]
     },
     {
       "id": 14,
@@ -223,10 +180,7 @@
       "stock": 40,
       "type": "Flowering",
       "thumbnail": "plants/14/1.jpg",
-      "images": [
-        "plants/14/1.jpg",
-        "plants/14/2.jpg"
-      ]
+      "images": ["plants/14/1.jpg", "plants/14/2.jpg"]
     },
     {
       "id": 15,
@@ -239,11 +193,7 @@
       "stock": 35,
       "type": "Fern",
       "thumbnail": "plants/15/1.jpg",
-      "images": [
-        "plants/15/1.jpg",
-        "plants/15/2.jpg",
-        "plants/15/3.jpg"
-      ]
+      "images": ["plants/15/1.jpg", "plants/15/2.jpg", "plants/15/3.jpg"]
     },
     {
       "id": 16,
@@ -256,10 +206,7 @@
       "stock": 14,
       "type": "Fern",
       "thumbnail": "plants/16/1.jpg",
-      "images": [
-        "plants/16/1.jpg",
-        "plants/16/2.jpg"
-      ]
+      "images": ["plants/16/1.jpg", "plants/16/2.jpg"]
     },
     {
       "id": 17,
@@ -272,10 +219,7 @@
       "stock": 38,
       "type": "Lavender",
       "thumbnail": "plants/17/1.jpg",
-      "images": [
-        "plants/17/1.jpg",
-        "plants/17/2.jpg"
-      ]
+      "images": ["plants/17/1.jpg", "plants/17/2.jpg"]
     },
     {
       "id": 18,
@@ -288,10 +232,7 @@
       "stock": 23,
       "type": "Lavender",
       "thumbnail": "plants/18/1.jpg",
-      "images": [
-        "plants/18/1.jpg",
-        "plants/18/2.jpg"
-      ]
+      "images": ["plants/18/1.jpg", "plants/18/2.jpg"]
     },
     {
       "id": 19,
@@ -304,10 +245,7 @@
       "stock": 34,
       "type": "Cactus",
       "thumbnail": "plants/19/1.jpg",
-      "images": [
-        "plants/19/1.jpg",
-        "plants/19/2.jpg"
-      ]
+      "images": ["plants/19/1.jpg", "plants/19/2.jpg"]
     },
     {
       "id": 20,
@@ -320,10 +258,7 @@
       "stock": 31,
       "type": "Cactus",
       "thumbnail": "plants/20/1.jpg",
-      "images": [
-        "plants/20/1.jpg",
-        "plants/20/2.jpg"
-      ]
+      "images": ["plants/20/1.jpg", "plants/20/2.jpg"]
     },
     {
       "id": 21,
@@ -336,10 +271,7 @@
       "stock": 65,
       "type": "Cactus",
       "thumbnail": "plants/21/1.jpg",
-      "images": [
-        "plants/21/1.jpg",
-        "plants/21/2.jpg"
-      ]
+      "images": ["plants/21/1.jpg", "plants/21/2.jpg"]
     },
     {
       "id": 22,
@@ -352,11 +284,7 @@
       "stock": 46,
       "type": "Tree",
       "thumbnail": "plants/22/1.jpg",
-      "images": [
-        "plants/22/1.jpg",
-        "plants/22/2.jpg",
-        "plants/22/3.jpg"
-      ]
+      "images": ["plants/22/1.jpg", "plants/22/2.jpg", "plants/22/3.jpg"]
     },
     {
       "id": 23,
@@ -369,10 +297,7 @@
       "stock": 63,
       "type": "Tree",
       "thumbnail": "plants/23/1.jpg",
-      "images": [
-        "plants/23/1.jpg",
-        "plants/23/2.jpg"
-      ]
+      "images": ["plants/23/1.jpg", "plants/23/2.jpg"]
     },
     {
       "id": 24,
@@ -385,10 +310,7 @@
       "stock": 27,
       "type": "Tree",
       "thumbnail": "plants/24/1.jpg",
-      "images": [
-        "plants/24/1.jpg",
-        "plants/24/2.jpg"
-      ]
+      "images": ["plants/24/1.jpg", "plants/24/2.jpg"]
     }
   ],
   "total": 24

@@ -1,5 +1,5 @@
-@use "../../abstracts/mixins";
-@use "../../abstracts/variables";
+@use '../../abstracts/mixins';
+@use '../../abstracts/variables';
 
 .check {
   @include mixins.flexbox(space-between);

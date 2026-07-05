@@ -1,5 +1,5 @@
-@use "../abstracts/mixins";
-@use "../abstracts/variables";
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
 
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
@@ -11,7 +11,7 @@
   height: 200px;
   z-index: 100;
 
-  @media (max-width:600px) {
+  @media (max-width: 600px) {
     position: fixed;
     left: 0;
     top: 0;
@@ -20,7 +20,6 @@
     height: 110px;
     border-radius: 10px;
   }
-
 }
 
 .header__container {
@@ -35,12 +34,12 @@
   justify-content: center;
   width: 155px;
   height: 155px;
-  transition: .3s;
+  transition: 0.3s;
   border-radius: 100%;
   background-color: variables.$green-dark;
   box-shadow: variables.$shadow;
 
-  @media (max-width:600px) {
+  @media (max-width: 600px) {
     width: 70px;
     height: 70px;
     margin-top: 20px;
@@ -54,19 +53,17 @@
     border-radius: 100%;
     transform: translateY(-12px);
 
-    @media (max-width:600px) {
+    @media (max-width: 600px) {
       width: 10px;
       height: 10px;
       transform: translateY(-7px);
     }
-
   }
 
   &:hover {
-    transform: scale(.98);
+    transform: scale(0.98);
     box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;
   }
-
 }
 
 .header__logo-text {
@@ -77,12 +74,11 @@
   text-decoration: none;
   padding-left: 5px;
 
-  @media (max-width:600px) {
+  @media (max-width: 600px) {
     font-size: 14px;
     line-height: 14px;
     padding-left: 2px;
   }
-
 }
 
 .nav {
@@ -96,7 +92,7 @@
   border-radius: 3px;
   border-color: variables.$grey-light;
 
-  @media (max-width:840px) {
+  @media (max-width: 840px) {
     margin-left: 50px;
     margin-top: 20px;
     height: 100px;
@@ -104,7 +100,7 @@
     align-items: flex-end;
   }
 
-  @media (max-width:600px) {
+  @media (max-width: 600px) {
     margin-top: 10px;
     height: auto;
     margin-left: 30px;
@@ -116,36 +112,33 @@
   &__list {
     @include mixins.flexbox();
 
-    @media (max-width:840px) {
+    @media (max-width: 840px) {
       flex-direction: column;
       align-items: flex-start;
       gap: 10px;
       margin: 0;
     }
-
   }
 
   &__item {
     padding: 0 20px;
 
-    @media (max-width:600px) {
+    @media (max-width: 600px) {
       padding: 0;
     }
-
   }
 
   &__link {
     color: variables.$grey-dark;
     transition: 0.5s;
 
-    &:hover, &:active {
+    &:hover,
+    &:active {
       text-decoration: none;
       color: variables.$green-dark;
       outline: none;
     }
-
   }
-
 }
 
 .cart {
@@ -162,13 +155,12 @@
   align-items: flex-end;
   cursor: pointer;
 
-  @media (max-width:600px) {
+  @media (max-width: 600px) {
     background-size: 30px, 30px;
     position: fixed;
     right: 5px;
     top: 20px;
   }
-
 }
 
 .cart__num {
@@ -176,14 +168,14 @@
   transition: 0.5s;
   @include mixins.iconCircle();
 
-  &:hover, &:active {
+  &:hover,
+  &:active {
     background-color: variables.$green-dark;
   }
 
-  @media (max-width:600px) {
+  @media (max-width: 600px) {
     margin-right: -5px;
   }
-
 }
 
 .total-amount {
@@ -193,10 +185,9 @@
   align-items: center;
   justify-content: flex-end;
 
-  @media (max-width:600px) {
+  @media (max-width: 600px) {
     min-width: 50px;
     align-self: flex-end;
     padding-bottom: 10px;
   }
-
 }

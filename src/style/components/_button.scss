@@ -1,4 +1,4 @@
-@use "../abstracts/variables";
+@use '../abstracts/variables';
 
 .button {
   display: flex;
@@ -87,7 +87,7 @@
   border-radius: 5px;
   background: none;
   border: none;
-  transition: .3s;
+  transition: 0.3s;
 
   &:hover {
     background-color: variables.$green-extra-light-opacity;
@@ -100,7 +100,7 @@
   background: none;
   cursor: pointer;
   color: variables.$grey-medium;
-  transition: .3s;
+  transition: 0.3s;
 
   &:hover {
     color: variables.$green-medium;
@@ -122,15 +122,15 @@
   &__link,
   &__slash {
     color: variables.$grey-medium;
-    transition: .3s;
-  @media (max-width: 600px) {
-    font-size: 12px;
-  }
+    transition: 0.3s;
+    @media (max-width: 600px) {
+      font-size: 12px;
+    }
   }
 
   &__link:hover {
-      color: variables.$green-medium;
-    }
+    color: variables.$green-medium;
+  }
 }
 
 .filter-button {
@@ -145,12 +145,12 @@
   align-items: center;
   justify-content: center;
   background-color: variables.$white-medium;
-  transition: .3s;
+  transition: 0.3s;
   cursor: pointer;
   z-index: 200;
 
   &:hover {
-    transform: scale(.95);
+    transform: scale(0.95);
     box-shadow: none;
   }
 
@@ -159,7 +159,7 @@
     border-radius: 3px;
     width: 25px;
     height: 3px;
-    transition: .3s;
+    transition: 0.3s;
   }
 
   &__round {
@@ -168,7 +168,7 @@
     border-radius: 100px;
     width: 10px;
     height: 10px;
-    transition: .3s;
+    transition: 0.3s;
   }
 
   &_active {
@@ -182,5 +182,4 @@
       height: 3px;
     }
   }
-
 }
