@@ -6,8 +6,6 @@ import CatalogPage from './pages/catalog-page';
 import ErrorPage from './pages/error-page';
 import PlantPage from './pages/plant-page';
 
-const BASE_PATH = '/ci-cd';
-
 class Router {
   static catalogPage: CatalogPage;
   static cartPage: CartPage;
@@ -21,18 +19,16 @@ class Router {
     Router.errorPage = new ErrorPage(cart);
   }
 
-  static getAppPath(pathname: string) {
-    return pathname.startsWith(BASE_PATH) ? pathname.slice(BASE_PATH.length) || '/' : pathname;
-  }
+  static getHashPath() {
+    const hash = window.location.hash.replace('#', '');
 
-  static getBrowserPath(pageId: string) {
-    return `${BASE_PATH}${pageId}`;
+    return hash || PagesList.catalogPage;
   }
 
   static render(pathname: string) {
-    const appPath = Router.getAppPath(pathname);
+    const path = pathname.split('?')[0];
 
-    switch (appPath) {
+    switch (path) {
       case PagesList.catalogPage:
         Router.catalogPage.draw();
         break;
@@ -46,8 +42,8 @@ class Router {
         break;
 
       default:
-        if (isPlantsId(appPath)) {
-          Router.plantPage.draw(appPath.slice(1));
+        if (isPlantsId(path)) {
+          Router.plantPage.draw(path.slice(1));
         } else {
           Router.errorPage.draw();
         }
@@ -59,7 +55,7 @@ class Router {
   }
 
   static goTo(pageId: string) {
-    window.history.pushState({ pageId }, pageId, Router.getBrowserPath(pageId));
+    window.location.hash = pageId;
     Router.render(pageId);
     window.scrollTo(0, 0);
   }
@@ -73,12 +69,10 @@ class Router {
           e.preventDefault();
 
           if (link instanceof HTMLAnchorElement) {
-            const appPath = Router.getAppPath(new URL(link.href).pathname);
-            const currentPath = Router.getAppPath(new URL(window.location.href).pathname);
+            const url = new URL(link.href);
+            const nextPage = `${url.pathname}${url.search}`;
 
-            if (appPath !== currentPath) {
-              Router.goTo(appPath);
-            }
+            Router.goTo(nextPage);
           }
         });
 
@@ -88,12 +82,11 @@ class Router {
   }
 
   static startRouter() {
-    window.addEventListener('popstate', () => {
-      Router.render(new URL(window.location.href).pathname);
+    window.addEventListener('hashchange', () => {
+      Router.render(Router.getHashPath());
     });
 
-    const page = new URL(window.location.href).pathname;
-    Router.render(page);
+    Router.render(Router.getHashPath());
   }
 }
 
