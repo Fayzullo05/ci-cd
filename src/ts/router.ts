@@ -82,6 +82,10 @@ class Router {
   }
 
   static startRouter() {
+    if (!window.location.hash) {
+      window.location.hash = PagesList.catalogPage;
+    }
+
     window.addEventListener('hashchange', () => {
       Router.render(Router.getHashPath());
     });
