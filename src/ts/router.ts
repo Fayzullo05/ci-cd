@@ -19,59 +19,78 @@ class Router {
     Router.errorPage = new ErrorPage(cart);
   }
 
+  static getHashPath() {
+    const hash = window.location.hash.replace('#', '');
+
+    return hash || PagesList.catalogPage;
+  }
+
   static render(pathname: string) {
-    // console.log('render:', pathname);
-    switch (pathname) {
+    const path = pathname.split('?')[0];
+
+    switch (path) {
       case PagesList.catalogPage:
         Router.catalogPage.draw();
         break;
+
       case PagesList.cartPage:
         Router.cartPage.draw();
         break;
+
       case '/':
-        this.goTo(PagesList.catalogPage);
+        Router.goTo(PagesList.catalogPage);
         break;
+
       default:
-        if (isPlantsId(pathname)) {
-          Router.plantPage.draw(pathname.slice(1));
+        if (isPlantsId(path)) {
+          Router.plantPage.draw(path.slice(1));
         } else {
           Router.errorPage.draw();
         }
+
         break;
     }
+
     Router.changeLinks();
   }
 
   static goTo(pageId: string) {
-    window.history.pushState({ pageId }, pageId, pageId);
+    window.location.hash = pageId;
     Router.render(pageId);
     window.scrollTo(0, 0);
   }
 
   static changeLinks() {
     const links = document.querySelectorAll('[href^="/"]');
+
     links.forEach((link) => {
       if (!link.classList.contains('link-changed')) {
         link.addEventListener('click', (e) => {
           e.preventDefault();
-          if (
-            link instanceof HTMLAnchorElement &&
-            (new URL(link.href).pathname !== '/catalog' || new URL(window.location.href).pathname !== '/catalog')
-          ) {
-            Router.goTo(new URL(link.href).pathname);
+
+          if (link instanceof HTMLAnchorElement) {
+            const url = new URL(link.href);
+            const nextPage = `${url.pathname}${url.search}`;
+
+            Router.goTo(nextPage);
           }
         });
+
         link.classList.add('link-changed');
       }
     });
   }
 
   static startRouter() {
-    window.addEventListener('popstate', () => {
-      Router.render(new URL(window.location.href).pathname);
+    if (!window.location.hash) {
+      window.location.hash = PagesList.catalogPage;
+    }
+
+    window.addEventListener('hashchange', () => {
+      Router.render(Router.getHashPath());
     });
-    const page = new URL(window.location.href).pathname;
-    Router.render(page);
+
+    Router.render(Router.getHashPath());
   }
 }
 

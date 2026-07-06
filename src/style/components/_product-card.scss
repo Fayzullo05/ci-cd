@@ -1,5 +1,5 @@
-@use "../abstracts/mixins";
-@use "../abstracts/variables";
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
 
 .product {
   align-self: stretch;
@@ -24,7 +24,8 @@
     gap: 10px;
   }
 
-  &__discount, &__rating {
+  &__discount,
+  &__rating {
     position: relative;
     margin-bottom: 5px;
     @include mixins.iconCircle();
@@ -37,7 +38,6 @@
       font-weight: 900;
       color: variables.$green-extra-light;
     }
-
   }
 
   &__discount {
@@ -46,7 +46,6 @@
     span {
       color: variables.$purple-light;
     }
-
   }
 
   &__rating span {
@@ -116,7 +115,6 @@
     &__purchase {
       margin-top: 26px;
     }
-
   }
 
   // cart list
@@ -139,21 +137,19 @@
       background-size: contain;
       background-origin: content-box;
 
-      @media (max-width:600px) {
+      @media (max-width: 600px) {
         padding: 0;
         width: 90%;
       }
-
     }
 
     &__stock {
       margin-right: 15px;
       margin-top: 40px;
 
-      @media (max-width:600px) {
+      @media (max-width: 600px) {
         margin-top: 20px;
       }
-
     }
 
     &__purchase {
@@ -167,10 +163,9 @@
     &__price {
       font-size: 28px;
 
-      @media (max-width:600px) {
+      @media (max-width: 600px) {
         font-size: 20px;
       }
-
     }
 
     &__old-price {
@@ -178,10 +173,9 @@
       color: variables.$grey-medium;
       text-decoration: line-through;
 
-      @media (max-width:600px) {
+      @media (max-width: 600px) {
         font-size: 12px;
       }
-
     }
 
     &__info {
@@ -190,11 +184,10 @@
       position: relative;
       padding: 30px 30px 15px;
 
-      @media (max-width:600px) {
+      @media (max-width: 600px) {
         width: 100%;
         padding: 10px 20px 10px;
       }
-
     }
 
     &__amount {
@@ -210,15 +203,13 @@
       -webkit-box-orient: vertical;
     }
 
-    @media (max-width:600px) {
+    @media (max-width: 600px) {
       flex-direction: column;
     }
-
   }
-
 }
 
-@media (max-width:1240px) {
+@media (max-width: 1240px) {
   .product {
     .landscape & {
       @include mixins.flexbox();
@@ -232,21 +223,17 @@
         @include mixins.flexbox(flex-end);
         gap: 20px;
       }
-
     }
-
   }
-
 }
 
-@media (max-width:1150px) {
+@media (max-width: 1150px) {
   .product {
     width: calc((100% - 30px) / 2);
   }
-
 }
 
-@media (max-width:600px) {
+@media (max-width: 600px) {
   .product {
     width: 100%;
 
@@ -292,9 +279,6 @@
         margin-right: 0;
         order: 1;
       }
-
     }
-
   }
-
 }

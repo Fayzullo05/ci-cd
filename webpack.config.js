@@ -17,10 +17,10 @@ module.exports = {
   entry: './src/index.ts',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+    publicPath: './',
     clean: true,
     filename: '[name].[contenthash].js',
-    assetModuleFilename: 'assets/[name][ext]',
+    assetModuleFilename: 'assets/[name].[contenthash][ext]',
   },
   devServer: {
     open: true,

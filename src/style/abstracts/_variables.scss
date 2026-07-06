@@ -2,10 +2,6 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
-
-
-
-
 /// Regular font family
 /// @type List
 $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
@@ -14,11 +10,6 @@ $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvet
 /// @type List
 $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
 
-
-
-
-
-
 /// @type Color
 $black: #212121 !default;
 
@@ -26,10 +17,10 @@ $black: #212121 !default;
 $green-dark: #186049 !default;
 
 /// @type Color
-$green-medium: #22795D !default;
+$green-medium: #22795d !default;
 
 /// @type Color
-$green-light: #2F8569 !default;
+$green-light: #2f8569 !default;
 
 /// @type Color
 $green-extra-light: #89c1b0 !default;
@@ -44,21 +35,18 @@ $purple-medium: #ab5abb !default;
 $purple-light: #e694ff !default;
 
 /// @type Color
-$grey-medium: #CDCDCD !default;
+$grey-medium: #cdcdcd !default;
 
 /// @type Color
 $grey-dark: #909090 !default;
 
 /// @type Color
-$grey-light: #D9D9D9 !default;
+$grey-light: #d9d9d9 !default;
 
 /// @type Color
-$white-medium: #FFFFFF !default;
-
+$white-medium: #ffffff !default;
 
 $shadow: rgba(0, 0, 0, 0.15) 0px 10px 20px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
-
-
 
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
@@ -68,11 +56,6 @@ $breakpoints: (
   'medium': 768px,
   'large': 1024px,
 ) !default;
-
-
-
-
-
 
 /// Relative or absolute URL where all assets are served from
 /// @type String

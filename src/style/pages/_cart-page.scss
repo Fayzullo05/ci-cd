@@ -1,4 +1,4 @@
-@use "../abstracts/variables";
+@use '../abstracts/variables';
 
 .cart-page {
   margin-top: 25px;
@@ -152,7 +152,7 @@
   justify-content: center;
   color: variables.$grey-medium;
   border-radius: 100%;
-  border: .5px variables.$grey-medium solid;
+  border: 0.5px variables.$grey-medium solid;
 }
 
 .full-cart-page__panel {
@@ -220,7 +220,7 @@
 }
 
 .full-cart-page__subtotal,
-.discounts__item { 
+.discounts__item {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px variables.$grey-medium dotted;
@@ -234,11 +234,11 @@
 }
 
 .discounts__item-promo {
-  transition: .3s;
+  transition: 0.3s;
   cursor: pointer;
 
   &::before {
-    transition: .3s;
+    transition: 0.3s;
     content: 'x';
     opacity: 0;
     position: absolute;
@@ -248,12 +248,11 @@
 
   &:hover {
     color: red;
-    transition: .3s;
+    transition: 0.3s;
 
     &::before {
       opacity: 1;
     }
-
   }
 }
 

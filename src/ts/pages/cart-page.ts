@@ -88,8 +88,8 @@ class CartPage extends Page {
   }
 
   private setCartFromQuery() {
-    const currentUrl = new URL(window.location.href);
-    const queryCart = currentUrl.searchParams.get('cart');
+    const params = new URLSearchParams(window.location.hash.split('?')[1] || '');
+    const queryCart = params.get('cart');
     if (queryCart) {
       try {
         const queryCartObj: Cart = JSON.parse(queryCart);
@@ -105,8 +105,8 @@ class CartPage extends Page {
   }
 
   private setPaginationFromQuery() {
-    const currentUrl = new URL(window.location.href);
-    const queryPageInfo = currentUrl.searchParams.get('pageInfo');
+    const params = new URLSearchParams(window.location.hash.split('?')[1] || '');
+    const queryPageInfo = params.get('pageInfo');
     if (queryPageInfo && JSON.parse(queryPageInfo)) {
       const queryPageInfoObj: PageInfo = JSON.parse(queryPageInfo);
       if (queryPageInfoObj && this.isPaginationValid(queryPageInfoObj)) {
@@ -117,11 +117,20 @@ class CartPage extends Page {
   }
 
   private setQuery() {
-    const currentUrl = new URL(window.location.href);
-    if (currentUrl.pathname !== PagesList.cartPage) return;
-    currentUrl.searchParams.set('cart', JSON.stringify(this.cart));
-    currentUrl.searchParams.set('pageInfo', JSON.stringify(this.pageInfo));
-    window.history.replaceState({}, currentUrl.toString(), currentUrl);
+    const hash = window.location.hash.replace('#', '');
+    const path = hash.split('?')[0];
+
+    if (path !== PagesList.cartPage) return;
+
+    const params = new URLSearchParams(hash.split('?')[1] || '');
+    params.set('cart', JSON.stringify(this.cart));
+    params.set('pageInfo', JSON.stringify(this.pageInfo));
+
+    const basePath = window.location.pathname.endsWith('/')
+      ? window.location.pathname
+      : `${window.location.pathname.split('/').slice(0, -1).join('/')}/`;
+
+    window.history.replaceState({}, 'cart', `${basePath}#${PagesList.cartPage}?${params.toString()}`);
   }
 
   private isCartValid(queryCartObj: Cart) {

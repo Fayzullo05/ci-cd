@@ -1,5 +1,5 @@
-@use "../abstracts/mixins";
-@use "../abstracts/variables";
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
 
 .catalog {
   @include mixins.flexbox(_, flex-start);
@@ -30,7 +30,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(245, 222, 179, 0);
-    transition: .3s;
+    transition: 0.3s;
 
     &_active {
       background-color: variables.$green-extra-light-opacity;
@@ -55,11 +55,11 @@
     color: variables.$green-medium;
   }
 
-  &__sale{
+  &__sale {
     margin-top: -10px;
   }
 
-  &__button-wrapper{
+  &__button-wrapper {
     width: 100%;
     @include mixins.flexbox(space-between);
     gap: 5px;
@@ -79,7 +79,7 @@
     width: calc(370px);
     height: calc(100% - 40px);
     overflow-y: auto;
-    transition: .5s;
+    transition: 0.5s;
 
     @media (max-width: 470px) {
       width: calc(100% - 40px);
@@ -132,4 +132,3 @@
     gap: 30px;
   }
 }
-

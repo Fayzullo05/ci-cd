@@ -96,10 +96,15 @@ class CatalogPage extends Page {
 
   static setQueryParams() {
     const currentParamsObj = Object.fromEntries(Object.entries(queryParamsObj).filter((item) => item[1] !== ''));
-    const paramsStr = new URLSearchParams(currentParamsObj);
-    const currentUrl = new URL(window.location.href.split('#')[0]);
-    currentUrl.search = paramsStr.toString();
-    window.history.replaceState({}, 'catalog', currentUrl);
+    const paramsStr = new URLSearchParams(currentParamsObj).toString();
+
+    const basePath = window.location.pathname.endsWith('/')
+      ? window.location.pathname
+      : `${window.location.pathname.split('/').slice(0, -1).join('/')}/`;
+
+    const hashPath = paramsStr ? `/catalog?${paramsStr}` : '/catalog';
+
+    window.history.replaceState({}, 'catalog', `${basePath}#${hashPath}`);
   }
 }
 
